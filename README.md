@@ -1,16 +1,56 @@
-# React + Vite
+# TODO List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, responsive TODO list application built with React and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Screenshots
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Todo App Home](src/assets/todo%20home.png)
+![Todo App with Items](src/assets/todo.png)
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Add new todos with a button click or Enter key
+- Delete individual todos
+- Mark todos as complete — strikethrough on completion
+- Filter todos by **All** / **Active** / **Completed**
+- Prevents adding empty todos
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [React](https://react.dev)
+- [Vite](https://vitejs.dev)
+- [Tailwind CSS](https://tailwindcss.com)
+
+## Getting Started
+
+### Clone the repo
+
+```bash
+git clone https://github.com/bibekkunwar/todo-app.git
+cd todo-app
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run locally
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## Live Demo
+
+https://todo-react-app-one-theta.vercel.app
+
+## Author
+
+**Bibek Kunwar**
+Sydney, Australia
+
+[GitHub](https://github.com/bibekkunwar) · [Portfolio](https://bibekportfolio-github-io.vercel.app)
