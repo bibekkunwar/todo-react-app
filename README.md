@@ -1,16 +1,46 @@
-# React + Vite
+# TODO List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, responsive TODO list application built with React and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Add new todos with a button click or Enter key
+- Delete todos
+- Mark todos as complete with strikethrough
+- Filter todos by All / Active / Completed
+- Prevents adding empty todos
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- Tailwind CSS
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Installation
+
+```bash
+git clone https://github.com/bibekkunwar/todo-app.git
+cd todo-app
+npm install
+```
+
+### Run Locally
+
+```bash
+npm run dev
+```
+
+## Screenshots
+
+![Todo App Screenshot](screenshot.png)
+
+## Live Demo
+
+[Add your deployed URL here]
+
+## Author
+
+**Bibek Kunwar**  
+[GitHub](https://github.com/bibekkunwar) · [Portfolio](https://bibekportfolio-github-io.vercel.app)
