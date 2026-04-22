@@ -6,18 +6,21 @@ function App() {
   const [todo, setTodo] = useState([]);
   const [filter, setFilter] = useState("all");
 
-  function addItemToList() {
-    if(inputValue.trim() === "") return;
-    setTodo([...todo, { text: inputValue, completed: false }]);
-    setInputValue("");
-  }
+
   function handleKeyDown(e){
     if (e.key === "Enter")
       addItemToList();
   }
 
+  function addItemToList() {
+    if(inputValue.trim() === "") return;
+    setTodo([...todo, { text: inputValue, completed: false, id: Date.now() }]);
+    setInputValue("");
+  }
+  
+
   function deleteItem(itemToDelete) {
-    setTodo(todo.filter((t) => t !== itemToDelete));
+    setTodo(todo.filter((d) => d !== itemToDelete));
   }
 
   function toggleComplete(itemToToggle) {
@@ -34,31 +37,22 @@ function App() {
 
       <div className="flex gap-2 mb-8 p-6 text-white">
         <button
-          className={
-            filter === "all"
-              ? "bg-blue-600 px-4 py-2 rounded-lg"
-              : "bg-gray-700 px-4 py-2 rounded-lg"
-          }
+        className = {`px-4 py-2 rounded-lg ${filter === 'all' ? "bg-blue-600" : "bg-gray-700"}`}
+         
           onClick={() => setFilter("all")}
         >
           All
         </button>
         <button
-          className={
-            filter === "active"
-              ? "bg-blue-600 px-4 py-2 rounded-lg"
-              : "bg-gray-700 px-4 py-2 rounded-lg"
-          }
+        className = {`px-4 py-2 rounded-lg ${filter === 'active' ? "bg-blue-600" : "bg-gray-700"}`}
+          
           onClick={() => setFilter("active")}
         >
           Active
         </button>
         <button
-          className={
-            filter === "completed"
-              ? "bg-blue-600 px-4 py-2 rounded-lg"
-              : "bg-gray-700 px-4 py-2 rounded-lg"
-          }
+        className = {`px-4 py-2 rounded-lg ${filter === 'completed' ? "bg-blue-600" : "bg-gray-700"}`}
+          
           onClick={() => setFilter("completed")}
         >
           Completed
@@ -89,7 +83,7 @@ function App() {
           if (filter === "completed") return item.completed;
         })
         .map((item) => (
-          <div key={item.text} className="flex items-center justify-between bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 mb-3 w-96">
+          <div key={item.id} className="flex items-center justify-between bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 mb-3 w-96">
             <button className="bg-red-600 hover:bg-red-700 px-3 py-1 rounded text-sm text-white"
               onClick={() => {
                 deleteItem(item);
